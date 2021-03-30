@@ -89,10 +89,10 @@ public class AlbumsActivity extends AppCompatActivity
                     public void onClick(View v) {
                         Button btn = (Button) v;
                         Album album = (Album) btn.getTag();
-                        Intent intent = new Intent(getApplicationContext(), DetalheTodoActivity.class);
+                        Intent intent = new Intent(getApplicationContext(), DetalheActivity.class);
 
                         // adicional para incluir dados para a proxima activity
-                        intent.putExtra("objAlbum", album);
+                        intent.putExtra("obj", album);
                         // lança intent para o SO chamar a activity
                         startActivity(intent);
 

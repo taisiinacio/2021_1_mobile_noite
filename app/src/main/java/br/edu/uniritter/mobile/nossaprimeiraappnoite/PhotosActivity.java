@@ -92,10 +92,10 @@ public class PhotosActivity extends AppCompatActivity
                     public void onClick(View v) {
                         Button btn = (Button) v;
                         Photo photo = (Photo) btn.getTag();
-                        Intent intent = new Intent(getApplicationContext(), DetalheTodoActivity.class);
+                        Intent intent = new Intent(getApplicationContext(), DetalheActivity.class);
 
                         // adicional para incluir dados para a proxima activity
-                        intent.putExtra("objPhoto", photo);
+                        intent.putExtra("obj", photo);
                         // lança intent para o SO chamar a activity
                         startActivity(intent);
 

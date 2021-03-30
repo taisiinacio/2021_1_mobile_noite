@@ -90,10 +90,10 @@ public class PostsActivity extends AppCompatActivity
                     public void onClick(View v) {
                         Button btn = (Button) v;
                         Post post = (Post) btn.getTag();
-                        Intent intent = new Intent(getApplicationContext(), DetalheTodoActivity.class);
+                        Intent intent = new Intent(getApplicationContext(), DetalheActivity.class);
 
                         // adicional para incluir dados para a proxima activity
-                        intent.putExtra("objPost", post);
+                        intent.putExtra("obj", post);
                         // lança intent para o SO chamar a activity
                         startActivity(intent);
 

@@ -92,10 +92,10 @@ public class CommentsActivity extends AppCompatActivity
                     public void onClick(View v) {
                         Button btn = (Button) v;
                         Comment album = (Comment) btn.getTag();
-                        Intent intent = new Intent(getApplicationContext(), DetalheTodoActivity.class);
+                        Intent intent = new Intent(getApplicationContext(), DetalheActivity.class);
 
                         // adicional para incluir dados para a proxima activity
-                        intent.putExtra("objComment", album);
+                        intent.putExtra("obj", album);
                         // lança intent para o SO chamar a activity
                         startActivity(intent);
 

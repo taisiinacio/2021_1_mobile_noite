@@ -11,11 +11,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.NossaPrimeiraAppNoite">
-        <activity android:name=".DetalheTodoActivity"></activity>
+        <activity android:name=".DetalheActivity"></activity>
         <activity android:name=".SplashActivity" />
         <activity android:name=".AlbumsActivity" />
         <activity android:name=".CommentsActivity" />
         <activity android:name=".PhotosActivity" />
+        <activity android:name=".DetalhePhotoActivity" />
         <activity
             android:name=".PostsActivity"
             android:parentActivityName=".PostsActivity">

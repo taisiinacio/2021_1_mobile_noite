@@ -8,19 +8,21 @@
     tools:context=".DetalheActivity">
 
     <TextView
-        android:id="@+id/tvId"
+        android:id="@+id/tvuserIdAlbum"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="TextView" />
+        android:text="TextView"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
 
     <TextView
-        android:id="@+id/tvIdUser"
+        android:id="@+id/tvIdAlbum"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="TextView" />
+        android:text="TextView"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
 
     <TextView
-        android:id="@+id/tvTitle"
+        android:id="@+id/tvTitleAlbum"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="TextView"
@@ -28,18 +30,4 @@
         android:textSize="30sp"
         android:textStyle="bold|italic" />
 
-    <CheckBox
-        android:id="@+id/cbCompleted"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:checked="false"
-        android:onClick="cbClick"
-        android:text="Completado" />
-
-    <Button
-        android:id="@+id/button4"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:onClick="trocaLayout"
-        android:text="Button" />
 </LinearLayout>

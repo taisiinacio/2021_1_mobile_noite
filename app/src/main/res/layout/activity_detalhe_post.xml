@@ -8,19 +8,21 @@
     tools:context=".DetalheActivity">
 
     <TextView
-        android:id="@+id/tvId"
+        android:id="@+id/tvuserIdPost"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="TextView" />
+        android:text="TextView"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
 
     <TextView
-        android:id="@+id/tvIdUser"
+        android:id="@+id/tvIdPost"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="TextView" />
+        android:text="TextView"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
 
     <TextView
-        android:id="@+id/tvTitle"
+        android:id="@+id/tvTitlePost"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="TextView"
@@ -28,18 +30,13 @@
         android:textSize="30sp"
         android:textStyle="bold|italic" />
 
-    <CheckBox
-        android:id="@+id/cbCompleted"
+    <TextView
+        android:id="@+id/tvBodyPost"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:checked="false"
-        android:onClick="cbClick"
-        android:text="Completado" />
+        android:text="TextView"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display4"
+        android:textSize="30sp"
+        android:textStyle="bold|italic" />
 
-    <Button
-        android:id="@+id/button4"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:onClick="trocaLayout"
-        android:text="Button" />
 </LinearLayout>
