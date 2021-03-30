@@ -36,7 +36,7 @@ public class AlbumsActivity extends AppCompatActivity
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
    //LAYOUT
-        setContentView(R.layout.activity_album);
+        setContentView(R.layout.activity_lista);
 
 
    //DADOS DO INTENT
@@ -58,7 +58,7 @@ public class AlbumsActivity extends AppCompatActivity
 
         // Add the request to the RequestQueue.
         queue.add(jsonArrayRequest);
-        Toast.makeText(this,"qtd:"+albums.size(),Toast.LENGTH_LONG).show();
+
 
 
     }

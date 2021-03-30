@@ -36,7 +36,7 @@ public class PostsActivity extends AppCompatActivity
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
    //LAYOUT
-        setContentView(R.layout.activity_post);
+        setContentView(R.layout.activity_lista);
 
 
    //DADOS DO INTENT
@@ -58,8 +58,6 @@ public class PostsActivity extends AppCompatActivity
 
         // Add the request to the RequestQueue.
         queue.add(jsonArrayRequest);
-        Toast.makeText(this,"qtd:"+posts.size(),Toast.LENGTH_LONG).show();
-
 
     }
     // RESPOSTA DA API

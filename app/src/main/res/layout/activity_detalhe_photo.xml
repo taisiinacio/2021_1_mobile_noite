@@ -12,21 +12,21 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="TextView"
-        android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
+        android:textAppearance="@style/TextAppearance.AppCompat.Large" />
 
     <TextView
         android:id="@+id/tvIdPhoto"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="TextView"
-        android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
+        android:textAppearance="@style/TextAppearance.AppCompat.Large" />
 
     <TextView
         android:id="@+id/tvTitlePhoto"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="TextView"
-        android:textAppearance="@style/TextAppearance.AppCompat.Display4"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:textSize="30sp"
         android:textStyle="bold|italic" />
 
@@ -35,7 +35,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="TextView"
-        android:textAppearance="@style/TextAppearance.AppCompat.Display4"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
         android:textSize="30sp"
         android:textStyle="bold|italic" />
 
@@ -44,14 +44,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="TextView"
-        android:textAppearance="@style/TextAppearance.AppCompat.Display4"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
         android:textSize="30sp"
         android:textStyle="bold|italic" />
 
-    <Button
-        android:id="@+id/button4"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:onClick="trocaLayout"
-        android:text="Button" />
 </LinearLayout>

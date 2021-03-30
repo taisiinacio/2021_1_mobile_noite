@@ -10,7 +10,6 @@ import android.widget.Button;
 import br.edu.uniritter.mobile.nossaprimeiraappnoite.model.Comment;
 
 public class PrincipalActivity extends AppCompatActivity {
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -37,7 +36,6 @@ public class PrincipalActivity extends AppCompatActivity {
         else {
             intent = new Intent(this, AlbumsActivity.class);
         }
-
 
 
         // Envia nome do resources

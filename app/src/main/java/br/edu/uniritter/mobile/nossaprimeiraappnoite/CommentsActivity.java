@@ -36,7 +36,7 @@ public class CommentsActivity extends AppCompatActivity
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
    //LAYOUT
-        setContentView(R.layout.activity_comment);
+        setContentView(R.layout.activity_lista);
 
 
    //DADOS DO INTENT
@@ -59,7 +59,6 @@ public class CommentsActivity extends AppCompatActivity
 
         // Add the request to the RequestQueue.
         queue.add(jsonArrayRequest);
-        Toast.makeText(this,"qtd:"+ comments.size(),Toast.LENGTH_LONG).show();
 
 
     }

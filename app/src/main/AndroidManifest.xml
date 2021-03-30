@@ -11,24 +11,21 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.NossaPrimeiraAppNoite">
-        <activity android:name=".DetalheActivity"></activity>
+
+        <activity android:name=".DetalheActivity" />
         <activity android:name=".SplashActivity" />
-        <activity android:name=".AlbumsActivity" />
-        <activity android:name=".CommentsActivity" />
-        <activity android:name=".PhotosActivity" />
-        <activity android:name=".DetalhePhotoActivity" />
+        <activity
+            android:name=".AlbumsActivity"
+            android:parentActivityName=".PrincipalActivity" />
+        <activity
+            android:name=".CommentsActivity"
+            android:parentActivityName=".PrincipalActivity" />
+        <activity
+            android:name=".PhotosActivity"
+            android:parentActivityName=".PrincipalActivity" />
         <activity
             android:name=".PostsActivity"
-            android:parentActivityName=".PostsActivity">
-
-            <!--
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-            -->
-        </activity>
+            android:parentActivityName=".PrincipalActivity" />
         <activity android:name=".PrincipalActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
