@@ -13,9 +13,12 @@
         android:theme="@style/Theme.NossaPrimeiraAppNoite">
         <activity android:name=".DetalheTodoActivity"></activity>
         <activity android:name=".SplashActivity" />
+        <activity android:name=".AlbumsActivity" />
+        <activity android:name=".CommentsActivity" />
+        <activity android:name=".PhotosActivity" />
         <activity
-            android:name=".SegundaActivity"
-            android:parentActivityName=".SegundaActivity">
+            android:name=".PostsActivity"
+            android:parentActivityName=".PostsActivity">
 
             <!--
             <intent-filter>

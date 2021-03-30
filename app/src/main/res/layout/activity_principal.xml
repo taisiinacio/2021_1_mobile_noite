@@ -7,46 +7,31 @@
     android:orientation="vertical"
     tools:context=".PrincipalActivity">
 
-
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/posts"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:text="@string/ola" />
-
-    <Button
-        android:id="@+id/button3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
         android:onClick="abreSegundaActivity"
-        android:text="Button" />
-
+        android:text="Posts" />
 
     <Button
-        android:id="@+id/button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/bt_dispara"
-        tools:layout_editor_absoluteX="152dp"
-        tools:layout_editor_absoluteY="464dp" />
-
-    <EditText
-        android:id="@+id/editTextTextPersonName"
+        android:id="@+id/comments"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Name" />
+        android:onClick="abreSegundaActivity"
+        android:text="Comments" />
 
-    <EditText
-        android:id="@+id/editTextTextPassword"
+    <Button
+        android:id="@+id/albums"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:ems="10"
-        android:inputType="textPassword" />
+        android:onClick="abreSegundaActivity"
+        android:text="Albums" />
 
+    <Button
+        android:id="@+id/photos"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="abreSegundaActivity"
+        android:text="Photos" />
 </LinearLayout>

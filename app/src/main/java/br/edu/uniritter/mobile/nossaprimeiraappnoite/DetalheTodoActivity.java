@@ -22,9 +22,7 @@ public class DetalheTodoActivity extends AppCompatActivity {
         if (prc instanceof Todo) {
 
         }
-        if (prc instanceof Pessoa) {
 
-        }
         Todo todo = intent.getParcelableExtra("objTodo");
         bind(todo);
 

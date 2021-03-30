@@ -4,11 +4,9 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.strictmode.DiskWriteViolation;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -27,58 +25,63 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 import java.util.List;
 
-import br.edu.uniritter.mobile.nossaprimeiraappnoite.model.Todo;
+import br.edu.uniritter.mobile.nossaprimeiraappnoite.model.Post;
 
-public class SegundaActivity extends AppCompatActivity
+public class PostsActivity extends AppCompatActivity
         implements Response.Listener<JSONArray>,
         Response.ErrorListener{
 
-    List<Todo> todos =  new ArrayList<>();
+    List<Post> posts =  new ArrayList<>();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_segunda);
-        TextView tv = (TextView) findViewById(R.id.textoSegunda);
+   //LAYOUT
+        setContentView(R.layout.activity_post);
+
+
+   //DADOS DO INTENT
+
         Intent it = getIntent();
-        String txt = it.getStringExtra("nome");
-        Pessoa pes = it.getParcelableExtra("objPessoa");
-        //tv.setText(pes.getNome()+" ("+pes.getId()+")");
-        tv.setText(txt);
-        //Toast.makeText(this,"olá "+txt,Toast.LENGTH_LONG).show();
-// Volley
-        // Instantiate the RequestQueue.
+        String nome = it.getStringExtra("nome");
+        TextView tv = (TextView) findViewById(R.id.textoSegunda);
+        tv.setText(nome);
+
+
+    //CHAMADA DA API
+        String url = "https://jsonplaceholder.typicode.com/posts";
+
         RequestQueue queue = Volley.newRequestQueue(this);
-        String url = "https://jsonplaceholder.typicode.com/todos";
-
         // Request de JsonArray da URL.
-
         JsonArrayRequest jsonArrayRequest = new JsonArrayRequest(Request.Method.GET, url, null,
                 this, this);
 
 
         // Add the request to the RequestQueue.
         queue.add(jsonArrayRequest);
-        Toast.makeText(this,"qtd:"+todos.size(),Toast.LENGTH_LONG).show();
+        Toast.makeText(this,"qtd:"+posts.size(),Toast.LENGTH_LONG).show();
 
 
     }
-// Volley
+    // RESPOSTA DA API
     @Override
     public void onResponse(JSONArray response) {
         try {
 
+            // Converte o json para uma lista de objetos java do tipo post
             for(int i = 0; i < response.length(); i++) {
                 JSONObject json = response.getJSONObject(i);
-                Todo obj = new Todo(json.getInt("userId"),
+                Post obj = new Post(json.getInt("userId"),
                         json.getInt("id"),
                         json.getString("title"),
-                        json.getBoolean("completed"));
-                todos.add(obj);
+                        json.getString("body"));
+                posts.add(obj);
 
             }
-            Toast.makeText(this,"qtd:"+todos.size(),Toast.LENGTH_LONG).show();
+
+            //Percorre a lista de posts e cria um botão para cada item
+            Toast.makeText(this,"qtd:"+posts.size(),Toast.LENGTH_LONG).show();
             LinearLayout ll = findViewById(R.id.layoutVerticalItens);
-            for(Todo obj1 : todos) {
+            for(Post obj1 : posts) {
                 Button bt = new Button(this);
                 bt.setText(obj1.getTitle());
                 bt.setTag(obj1);
@@ -86,17 +89,18 @@ public class SegundaActivity extends AppCompatActivity
                     @Override
                     public void onClick(View v) {
                         Button btn = (Button) v;
-                        Todo todo = (Todo) btn.getTag();
+                        Post post = (Post) btn.getTag();
                         Intent intent = new Intent(getApplicationContext(), DetalheTodoActivity.class);
 
                         // adicional para incluir dados para a proxima activity
-                        intent.putExtra("objTodo", todo);
+                        intent.putExtra("objPost", post);
                         // lança intent para o SO chamar a activity
                         startActivity(intent);
-                        //Toast.makeText(v.getContext(),todo.getId()+" - "+todo.getTitle(),Toast.LENGTH_LONG).show();
+
                     }
                 });
                 ll.addView(bt);
+
             }
 
 
@@ -106,6 +110,7 @@ public class SegundaActivity extends AppCompatActivity
         }
     }
 
+    //ERRO DA API
     @Override
     public void onErrorResponse(VolleyError error) {
         String msg = error.getMessage();
